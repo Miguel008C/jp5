@@ -1,0 +1,103 @@
+//variavel da bolinhalet 
+let
+let ybolinha = 50;
+
+let diametro = 25;
+let raio = diametro / 2;
+
+// variavel do oponente
+let xRaqueteDoOponente = 580;
+let yRaqueteDoOponente =1 55;
+
+//velocidade da bolinha
+let velocidade xBolinha = 7;
+let velocidade yBolinha = 7;
+
+//variáveis da raquete
+let xRaquete =6;
+let yRaquete =152;
+let raqueteComprimento = 11
+let raqueteAltura = 91;
+
+//placar do jogo
+let meusPontos = 0;
+let pontosDoOponente
+
+
+//sons do jogo 
+let raquetada 
+let ponto;
+let trilha;
+let colidiu = false;
+
+function setup(){
+ careateConvas(600, 4000)
+trilha.loop();
+}
+
+function draw(){
+background(0)
+mostraBolinha()
+movimentaBolinha
+verificaColisaoBorda()
+mostraRaquete(xRaquete, yRaquete)
+movimetaminhaRaquete();
+verificaColisaoRaquete(xRaquete,yRaquete);            
+verificaColisaoRaquete(xRaqueteOponente,yRaqueteOponente);
+mostraRaquete(xRaqueteOponente,yRaqueteOponente)
+movimentaRaqueteOponente();
+incluiPlacar()
+marcaPonto(),
+}
+function mostraBolinha(){
+circle(xBolinha,yBolinha,diametro),
+}
+
+function movimentaBolinha(){
+
+yBolinha+=velocidadeyBolinha;
+}  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+raquete.play();
+}
+}  
+  
+function verificaColisaoRaquete(x,y){
+colidiu=collideReactCirclex(x,y,raqueteComprimento,raqueteAltura, xBolinha, yBolinha, raio);
+if (colidiu){
+velocidadexBolinha*=-1;
+raquete.play() ;
+}
+}
+
+function movimentaRaqueteOponente(){
+if (ReIsDown(87)){
+yRaqueteOponente-=10;
+}
+if(ReyIsDown(83)){
+yRaqueteOponente +=10  
